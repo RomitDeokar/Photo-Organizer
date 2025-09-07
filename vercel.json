@@ -1,12 +1,11 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
     }
-  ]
+  },
+  "framework": "vite",
+  "buildCommand": "node node_modules/vite/bin/vite.js build",
+  "devCommand": "node node_modules/vite/bin/vite.js dev",
+  "outputDirectory": "dist"
 }
