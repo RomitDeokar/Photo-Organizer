@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Albums</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Photo Albums</h1>
+        <button id="createAlbumBtn" class="btn btn-primary">Create Album</button>
+      </header>
+
+      <div id="albumsView">
+        <div id="albumsGrid" class="albums-grid"></div>
+      </div>
+
+      <div id="albumView">
+        <button id="backToAlbums" class="btn btn-text">← Back to Albums</button>
+        <div class="album-header">
+          <h2>Album Title</h2>
+          <p>Created on <span id="albumDate"></span></p>
+        </div>
+        <div class="photo-uploader-container">
+          <div class="photo-uploader">
+            <div id="uploadZone" class="upload-zone">
+              <div class="upload-message">
+                <svg
+                  class="upload-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L12 4m4 4v12"
+                  ></path>
+                </svg>
+                <span>Drag and drop photos here or click to upload</span>
+              </div>
+              <input
+                type="file"
+                id="fileInput"
+                class="file-input"
+                accept="image/*"
+                multiple
+              />
+            </div>
+            <div id="uploadProgress" class="upload-progress"></div>
+          </div>
+        </div>
+        <div class="photo-grid-container">
+          <div id="photoGrid" class="photo-grid"></div>
+        </div>
+      </div>
+
+      <dialog id="createAlbumModal" class="modal">
+        <form id="createAlbumForm" class="form">
+          <h2>Create New Album</h2>
+          <div class="form-group">
+            <label for="albumTitle">Album Title</label>
+            <input type="text" id="albumTitle" name="title" required />
+          </div>
+          <div class="form-group">
+            <label for="albumDescription">Description</label>
+            <textarea
+              id="albumDescription"
+              name="description"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancelCreateAlbum" class="btn btn-text">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Create Album</button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

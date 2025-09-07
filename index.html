@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Album Organizer</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Photo Album Organizer</h1>
+      <nav class="main-nav">
+        <button id="backToAlbums" class="btn" style="display: none;">← Back to Albums</button>
+        <button id="createAlbumBtn" class="btn">Create Album</button>
+      </nav>
+    </header>
+
+    <main class="app-main">
+      <section id="albumsView">
+        <div id="albumGrid" class="album-grid">
+          <!-- Albums will be inserted here -->
+        </div>
+      </section>
+
+      <section id="albumView" style="display: none;">
+        <div class="album-header">
+          <h2 id="albumTitle"></h2>
+          <p id="albumDescription"></p>
+        </div>
+        
+        <div id="photoUploader" class="photo-uploader-container">
+          <!-- Photo uploader will be inserted here -->
+        </div>
+
+        <div id="photoGrid" class="photo-grid-container">
+          <!-- Photos will be inserted here -->
+        </div>
+      </section>
+
+      <dialog id="createAlbumDialog" class="modal">
+        <form id="createAlbumForm" class="form">
+          <h2>Create New Album</h2>
+          <div class="form-group">
+            <label for="albumName">Album Name:</label>
+            <input type="text" id="albumName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="albumDescription">Description:</label>
+            <textarea id="albumDescription" name="description"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="button" class="btn" data-close-modal>Cancel</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
