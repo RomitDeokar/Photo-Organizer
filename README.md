@@ -75,7 +75,7 @@ Push & open a Pull Request
 
 🌟 Acknowledgements
 
-GitHub Spec Kit
+[GitHub Spec Kit](https://github.com/github/spec-kit)
  for inspiring spec-driven workflows
 
 Vite
