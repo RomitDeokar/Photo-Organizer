@@ -6,6 +6,13 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'dist'
-  }
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  },
+  base: '/'
 });
