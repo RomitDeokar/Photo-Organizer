@@ -5,14 +5,12 @@ export default defineConfig({
     port: 3000
   },
   build: {
-    target: 'esnext',
     outDir: 'dist',
     assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
-    }
+    emptyOutDir: true,
+    sourcemap: true,
+    target: 'esnext',
+    modulePreload: true
   },
-  base: '/'
+  base: './'
 });
