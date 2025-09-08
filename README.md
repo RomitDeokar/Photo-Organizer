@@ -75,8 +75,10 @@ Push & open a Pull Request
 
 🌟 Acknowledgements
 
+docs:
 [GitHub Spec Kit](https://github.com/github/spec-kit)
  for inspiring spec-driven workflows
+ https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
 
 Vite
  for blazing-fast development
